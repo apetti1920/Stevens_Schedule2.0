@@ -1,0 +1,19 @@
+{
+  "name": "stevens_schedule2.0",
+  "version": "1.0.0",
+  "description": "A better way to view your Steven's Schedule.  The website allows students to pick their own classes and the algorithm will show you every possible permutation of class schedule.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apetti1920/Stevens_Schedule2.0.git"
+  },
+  "author": "Aidan Petti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apetti1920/Stevens_Schedule2.0/issues"
+  },
+  "homepage": "https://github.com/apetti1920/Stevens_Schedule2.0#readme"
+}
