@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"/>
+        <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css'/>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js'></script>
+
+        <script></script>
+
+    </head>
+    <body>
+        <script>
+            $.getJSON("/classnames", function(data){
+                console.log(data)
+            });
+
+            classlist = {list: ['MA 120', 'CH 115']};
+
+            // $.post("/schedules", classlist, function (data) {
+            //     console.log(data)
+            // }, "application/json");
+
+            $.ajax({
+                url: '/schedules',
+                type: 'POST',
+                data: classlist,
+                mimetype: "application/json"
+            });
+
+        </script>
+
+        <div class="ui three column doubling stackable grid container">
+            <div class="column">
+                <div id='calendar1'></div>
+            </div>
+            <div class="column">
+                <div id='calendar2'></div>
+            </div>
+            <div class="column">
+                <div id='calendar3'></div>
+            </div>
+        </div>
+
+    </body>
+</html>

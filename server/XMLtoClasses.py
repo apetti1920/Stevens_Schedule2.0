@@ -23,7 +23,7 @@ class individualClass:
             self.Activity, self.Site, self.Meetings = self.createMeetings(
                 [i for i in sectionxml.getchildren() if i.tag == 'Meeting'])
         except Exception as e:
-            print('error', e)
+            pass
 
     def getSection(self) -> str:
         return self.Section['Name'] + ' ' + self.Section['Number']
