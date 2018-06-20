@@ -16,23 +16,33 @@
 
     </head>
     <body>
+        <select class="ui fluid search dropdown" multiple="" id="name_drop">
+            <option value="">Class Name</option>
+        </select>
+
+
         <script>
-            $.getJSON("/classnames", function(data){
-                console.log(data)
+            $('#name_drop').dropdown({
+                maxSelections: 10,
+                apiSettings: {url: '/classnames'},
+                filterRemoteData: true
             });
+            /*$.getJSON("/classnames", function(data){
+                console.log(data);
 
-            classlist = {list: ['MA 120', 'CH 115']};
+            });*/
 
-            // $.post("/schedules", classlist, function (data) {
-            //     console.log(data)
-            // }, "application/json");
+            /*classlist = {classes: ['MA 120', 'CH 115']};
 
             $.ajax({
                 url: '/schedules',
                 type: 'POST',
-                data: classlist,
-                mimetype: "application/json"
-            });
+                data: JSON.stringify(classlist),
+                contentType: "application/json",
+                success: function(data) {
+                    console.log(data['results'])
+                }
+            });*/
 
         </script>
 
