@@ -21,9 +21,12 @@ def getAllClasses(year: str, term: str) -> list:
     return allclasses
 
 
-def getAllClassNames(classes: list) -> list:
-    x = [x.getSection() for x in classes]
-    return list(set(x))
+def getAllClassNames(classes: list) -> dict:
+    x1 = sorted(list(set([x.getSection() for x in classes])))
+    print(x1)
+    x2 = [{"name": x, "value": x.replace(' ', ''), "text": x} for x in x1]
+    returnval = {"success": True, "results": x2}
+    return returnval
 
 
 def getCalendarFromClasses(classList: str, allClasses: list) -> list:

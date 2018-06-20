@@ -27,7 +27,8 @@ def index():
 @app.route('/classnames', methods=['GET'])
 def classnmes():
     names = server.getAllClassNames(server.getAllClasses('2018', 'F'))
-    return json.dumps(sorted(names))
+    print(names)
+    return json.dumps(names)
 
 
 @app.route('/schedules', methods=['POST'])
@@ -37,7 +38,7 @@ def scedules():
     print('here')
     print(classes)
 
-    return classes
+    return json.dumps(classes)
 
 if __name__ == '__main__':
     app.run(debug=True)
