@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "title": "Steven's Scheduler Threat Model",
+    "owner": "Aidan Petti",
+    "description": "A website to coordinate the many combinations of class schedules possible with a finite list of classes"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": []
+  }
+}
